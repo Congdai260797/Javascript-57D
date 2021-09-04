@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="title">Learn Javascript</h1>
+    <script>
+        var emailKey = 'email';
+        var myInfo = {
+            name : 'Cong Dai',
+            age : 24,
+            address : 'Ha Noi',
+            [emailKey]: 'Congdai@gmail.com',
+            getName: function(){
+                return this.name;
+            }
+        };
+        
+        console.log(myInfo.getName())
+        console.log('Object constructor')
+        
+        function User(firstName, lastName, avatar){
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.avatar = avatar;
+            this.getName = function(){
+                return `${this.firstName} ${this.lastName} - ${this.sex}`;
+            }
+        }
+        User.prototype.className = 'F8';
+
+        var author = new User('Cong', 'Dai', '24');
+        var user = new User('Thao', 'Ngoc', '21');
+        author.sex = 'Nam';
+        user.sex = 'Nu';
+        console.log(author)
+        console.log(author.getName())
+        console.log(user)
+        console.log(user.getName())
+        console.log(user)
+
+        console.log('\n Đối tượng date')
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var day = date.getDate();
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+        console.log(date)
+        console.log(`${day}/${month}/${year} - ${hour}:${minute}`)
+    
+    function run(number) {
+        if(number % 15 == 0){
+            return 'f8';
+        }else if(number % 5 == 0){
+            return 8;
+        }else if(number % 3 == 0){
+            return 'f';
+        }
+    }
+    console.log(run(15))
+    </script>
+</body>
+</html>

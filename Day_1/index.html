@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="title">Javascript cơ bản!</h1>
+    
+    <script>
+        console.log('ex:1')
+        var firstName = 'Cong';
+        var lastName = 'Đại';
+        console.log(`My name is: ${firstName} ${lastName}`);
+    </script>
+    <script>
+        var myString = '  Hoc JavascriptJa';
+        console.log(myString.length);
+        console.log(myString.indexOf('Ja'));
+        console.log(myString.search('Ja'));
+        console.log(myString.slice(4,8));
+        console.log(myString.replace(/Hoc/g, 'learn'));
+        console.log(myString.toUpperCase())
+        console.log(myString.toLocaleLowerCase())
+        console.log('remove space extra')
+        console.log(myString.trim());
+
+        console.log('Cắt chuỗi')
+        var langueges = 'JS, PHP, Python';
+        console.log(langueges.split(', '))
+
+        console.log('Lấy giá trị ở vị trí')
+        var myString2 = 'Cong Dai';
+        console.log(myString2.charAt(1));
+        console.log(myString2[1]);
+
+        console.log('Làm việc với Number');
+        var age = 20;
+        var PI = 3.14123123;
+        console.log(age.toString())
+        console.log(PI.toFixed())
+
+        console.log('Làm việc với Mảng');
+        var arrLangueges = [
+            'JS',
+            'PHP',
+            'Python',
+            'ASP.Net'
+        ];
+        console.log(Array.isArray({arrLangueges}))
+        console.log(arrLangueges.length)
+        console.log('Làm việc với Mảng part 2');
+        console.log(arrLangueges.toString())
+        console.log(arrLangueges.join('_'))
+        console.log(arrLangueges.pop())
+        console.log('Thêm phần tử vào cuối mảng và trả về số lượng')
+        console.log(arrLangueges.push('Java'))
+        console.log(arrLangueges)
+        console.log(arrLangueges.shift())
+        console.log(arrLangueges.unshift())
+        console.log(arrLangueges)
+        console.log(arrLangueges.splice(1,1, 'C+', 'C++'))
+        console.log(arrLangueges)
+        var arrLangueges2 = [
+            'Ruby',
+            'Android'
+        ]
+        console.log(arrLangueges.concat(arrLangueges2))
+        console.log(arrLangueges.slice(1,3))
+        console.log('Tham số trong funtion')
+        function writeLog(){
+            var myString = '';
+            for(var param of arguments){
+                myString += `${param} - `; 
+            }
+            console.log(myString);
+        } 
+        writeLog('JS-1', 'JS-2', 'JS-3')
+        console.log('Return trong funtion')
+        function sum(a, b){
+            if(!isNaN(a + b)){
+                return a + b;
+            }
+            return false;
+        }
+        console.log(sum('1','2'));
+
+        function stringInstring(needle, haystack){
+            if(haystack.search(needle)){
+                console.log(haystack)
+            }else{
+                console.log(needle)
+            }
+        }
+        console.log(stringInstring('JS','Hojc JS '));
+
+    </script>
+</html>
