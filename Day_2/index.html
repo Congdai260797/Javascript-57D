@@ -1,0 +1,297 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="title">Learn Javascript.</h1>
+    <script>
+        console.log('Làm việc với vòng lặp');
+        // console.log('----------1 - - for in--------');
+        // var myInfo = {
+        //     name : 'Cong Dai',
+        //     age : 24,
+        //     address : 'Ha Noi'
+        // };
+        // for(var key in myInfo){
+        //    console.log(myInfo[key])
+        // }
+        // console.log('----------2 - - for of--------');
+        // var langueges = [
+        //     'PHP',
+        //     'Javascript',
+        //     'Python'
+        // ]
+        // for(var value of langueges){
+        //     console.log(value)
+        // }
+        // console.log('---------3 --------');
+        // var langueges2 = {
+        //     name : 'Cong Dai',
+        //     age : 24
+        // };
+        // for(var value of Object.values(langueges2)){
+        //     console.log(value)
+        // }
+        // console.log('---------4 - white---------');
+        // var j = 1;
+        // while (j < 3){
+        //     console.log(j)
+        //     j++;
+        // }
+        // console.log('---------5 - Do/White---------');
+        // var i = 0;
+        // do{
+        //     i++;
+        //     console.log(i);
+        // } while(i < 10);
+        // console.log('---------5 - break & continue---------');
+        // for(var i = 0; i < 10; i++){
+        //     if(i%2 !== 0){
+        //         continue;
+        //     }
+        //     console.log(i)
+        // }
+        // for(var i = 0; i < 10; i++){
+        //     console.log(i)
+        //     if(i >= 5){
+        //         break;
+        //     }
+        // }
+        // console.log('---------6 - Vòng lặp lồng nhau ---------');
+        // var myArr = [
+        //     [1,2],
+        //     [3,4],
+        //     [5,6]
+        // ];
+        // for(var i = 0; i < myArr.length; i++){
+            
+        //     for(var j = 0; j < myArr[i].length; j++){
+        //         console.log(myArr[i][j])
+        //     }
+        // }
+        // for(var i = 0; i < 20; i+=5){
+        //     console.log(i)
+        // }
+        // console.log('---------- 7 Làm việc với mảng ---------');
+        // var courses = [
+        //     {
+        //         id: 1,
+        //         name: 'Javascript',
+        //         coin: 10
+        //     },
+        //     {
+        //         id: 2,
+        //         name: 'HTML, CSS',
+        //         coin: 0
+        //     },
+        //     {
+        //         id: 3,
+        //         name: 'Ruby',
+        //         coin: 0
+        //     },
+        //     {
+        //         id: 4,
+        //         name: 'PHP',
+        //         coin: 250
+        //     },
+        //     {
+        //         id: 5,
+        //         name: 'ReactJS',
+        //         coin: 250
+        //     },
+        //     {
+        //         id: 6,
+        //         name: 'PHP',
+        //         coin: 350
+        //     }
+        // ];
+        // courses.forEach(function(course, index){
+        //     console.log(index, course);
+        // });
+        // var isFree = courses.every(function(course, index){
+        //     return course.coin === 0;
+        // });
+        // var isFree = courses.some(function(course, index){
+        //     return course.coin === 0;
+        // });
+        // var isFree = courses.find(function(course, index){
+        //     return course.name === 'PHP';
+        // });
+        // var listCourses = courses.filter(function(course, index){
+        //     return course.name === 'PHP';
+        // });
+        // console.log(listCourses)
+        // VÍ DỤ
+        // function getRequestBodyFromValues(formValues) {
+        //     var obj ={};
+        //     formValues.forEach(function(course){
+        //         obj[course['key']] = course['value']
+        //     });
+        //     return obj;
+        // }
+        // console.log(getRequestBodyFromValues([
+        //     { key: 'name', value: 'Công Đại' },
+        //     { key: 'age', value: '24' },
+        //     { key: 'address', value: 'Chương Mỹ - Hà Nội' },
+        //     { key: 'CMTND', value: '017500760' }
+        // ]));
+        // console.log(getRequestBodyFromValues([
+        //     { key: 'name', value: 'Thảo Ngọc' },
+        //     { key: 'age', value: '21' },
+        //     { key: 'address', value: 'Bắc Hà - Lào Cai' },
+        //     { key: 'CMTND', value: '063549400' }
+        // ]));
+        // function hasFreeCourses(courses) {
+
+        //     var courseItem = {};
+        //     courses.forEach(function(course){
+        //         courseItem[course['key']] = course['value'];
+        //         return courses.some(i => i.value === 0);
+        //     });
+        //     return courseItem;
+        // }
+        // console.log(hasFreeCourses([{ key: 'javascript', value: 100 },
+        //     { key: 'HTML', value: 0 }
+        // ]));
+
+       
+        // var strings = ['JS', 'Hoc JS', 'Angular', 'RactJS'];
+        // var key = 'JS';
+        // function findStringsInArrayByKeyword(keyword, strings) {
+        //     return strings.filter(string => string.includes(keyword) ? string : '');   
+        // }
+        // console.log(findStringsInArrayByKeyword(key, strings));
+
+        // var scope_1 = [1,2,3,4];
+        // var scope_2 = [2,4,6,8];
+        // function findEqualValues(array1, array2){
+        //     return array2.filter(arr => array1.includes(arr) ? arr : '');
+        // }
+        // console.log(findEqualValues(scope_1, scope_2))
+        console.log('---------- 7 Làm việc với mảng part 2 ---------');
+        var courses = [
+            {
+                id: 1,
+                name: 'Javascript',
+                coin: 10
+            },
+            {
+                id: 2,
+                name: 'HTML, CSS',
+                coin: 0
+            },
+            {
+                id: 3,
+                name: 'Ruby',
+                coin: 0
+            },
+            {
+                id: 4,
+                name: 'PHP',
+                coin: 250
+            },
+            {
+                id: 5,
+                name: 'ReactJS',
+                coin: 250
+            },
+            {
+                id: 6,
+                name: 'PHP',
+                coin: 350
+            }
+        ];
+        
+        // var coursesHandler = function(course, index){
+        //     return Boolean(course.name);
+        //     // return {
+        //     //     id: course.id,
+        //     //     name: `Tên KH: ${course.name}`,
+        //     //     coin: `Price ${course.coin}`            
+        //     // }
+        //     // return `\n<h2>${course.name}</h2>`
+        // }
+
+        // var newCourses = courses.map(coursesHandler);
+        // // console.log(newCourses.join());
+        // console.log(newCourses);
+        // function convertToBoolean(courses) {
+        //     for(i = 0; i <= courses.length; i++){
+        //         console.log(Boolean(courses))
+        //     }
+        // }
+        // console.log(convertToBoolean(courses))
+        // var coinHandler = function(accumulator, currentValue){
+        //     return accumulator;
+        // };
+
+        // var totalCoin = courses.reduce(coinHandler, 0);
+        // console.log(totalCoin);
+
+        // var num = [1,2,3,4];
+        // function sum(numbers) {
+        //     return numbers.reduce(function(a, b){
+        //         return a + b;
+        //     },0);
+        // }
+        // console.log(sum(num));
+        // var stringNumber = [1,'hi',3,4]
+        // function sumNumbers(inputs) {
+        //     let fillter = inputs.filter(input => Number(input));
+        //     return fillter.reduce((callbackfn, currentValues)=>
+        //             callbackfn + currentValues
+        //     ,0);
+        // }
+        // console.log(sumNumbers(stringNumber));
+
+        var flatArr = [1, 2, [3, 4], 5, 6, [7,8,9]];
+        var arrFlat = flatArr.reduce(function(flatInput, arr){
+            return  flatInput.concat(arr) ;
+        },[]);
+        console.log(arrFlat)
+        var coursesArr = [
+            {
+                topic: 'Front-End',
+                courses: [
+                    {
+                        id: 1,
+                        title: 'Angular'
+                    },
+                    {
+                        id: 1,
+                        title: 'ReactJS'
+                    },
+                    {
+                        id: 1,
+                        title: 'VueJS'
+                    }
+                ]
+            },
+            {
+                topic: 'Back-End',
+                courses: [
+                    {
+                        id: 1,
+                        title: 'PHP'
+                    },
+                    {
+                        id: 1,
+                        title: 'Node JS'
+                    },
+                    {
+                        id: 1,
+                        title: 'Java'
+                    }
+                ]
+            }
+        ]
+        var courses_arr = coursesArr.reduce(function(stoge, course){
+            return stoge.concat(course.courses);
+        },[]);
+        console.log(courses_arr);
+    </script>
+</body>
+</html>
